@@ -1,0 +1,74 @@
+* {
+    --color--1 : #4681f4;
+    --color--2: #5783db;
+    --color--3: #55c2da;
+    --color--4: #5dbea3;
+    --color--5: #33b249;
+    --color--6: #5adbb5;
+    --color--7: #a881af;
+    --color--8: #80669d;
+    --color--9: #dd7973;
+    --color--10: #ffbd03;
+    --color--11: #ED0800;
+}
+
+.btn {
+    display: none;
+    display: inline-block;
+    padding: 1em .5em;
+    border: none;
+    border-radius:.5rem;
+    background:var(--color--01);
+    color: white;
+    font-size: inherit !important ;
+    font-weight: bold!important;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+
+.btn::before {
+    content:'';
+    display: block;
+    border-radius:.5rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--color--02);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 300ms ease-in-out;
+}
+
+.btn:hover::before{
+    transform: scaleX(1);
+}
+
+.btn:active::before {
+    transform:scale(0);
+}
+
+@keyframes buttonClick {
+    0% {
+        transform: scaleX(0);
+    }
+    50% {
+        transform:scaleX(1);
+    }
+    100% {
+        transform: scaleX(0);
+    }
+}
+
+.btn-primary {
+    --color--01: var(--color--1);
+    --color--02: var(--color--3);
+}
+
+.btn-secondary {
+    --color--01: var(--color--8);
+    --color--02: var(--color--7);
+}
