@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.text-area-container {
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.text-area-container > .text-area {
+    resize: none;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+.text-area-container > .text-area:focus {
+    outline: none;
+    border-color: var(--color--1);
+}

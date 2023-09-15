@@ -1,0 +1,49 @@
+* {
+    --color--1 : #4681f4;
+    --color--2: #5783db;
+    --color--3: #55c2da;
+    --color--4: #5dbea3;
+    --color--5: #33b249;
+    --color--6: #5adbb5;
+    --color--7: #a881af;
+    --color--8: #80669d;
+    --color--9: #dd7973;
+    --color--10: #ffbd03;
+    --color--11: #ED0800;
+}
+
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 12px !important;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    html {
+        font-size: 11px !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 10px !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 9px !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 8px !important;
+    }
+}

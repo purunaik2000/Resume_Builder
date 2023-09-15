@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Button.css';
 
 export default function Button(props) {
@@ -10,7 +10,7 @@ export default function Button(props) {
 
   return (
     <div className='btn-container'>
-      <button className={`btn btn-${colors[props.type] || 'primary'}`} onClick={props.onClick}>
+      <button className={`btn btn-${colors[props.color] || 'primary'} ${props.disabled}`} onClick={props.onClick} >
         { props.text }
       </button>
     </div>

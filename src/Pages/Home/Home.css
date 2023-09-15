@@ -1,0 +1,33 @@
+.home-page {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.home-page > .heading {
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.form-progress {
+    margin-bottom: 2rem;
+    max-width: 1000px;
+    width: 80%;
+    /* background-color: red; */
+    /* width: 50px; */
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 2rem;
+}

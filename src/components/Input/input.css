@@ -1,4 +1,6 @@
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -22,7 +24,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
+    --input--color--1: var(--color--1);
 }
 
 .input-container > .input {
@@ -35,7 +37,7 @@
     border-radius: 10px;
 }
 
-.input-container > span {
+.input-container > label {
     position:absolute;
     left: 2%;
     font-size: 1.5rem;
@@ -47,16 +49,16 @@
 
 .input-container .input:focus {
     outline: none !important ;
-    border-color: var(--color--1);
+    border-color: var(--input--color--1);
 }
 
-.input-container .input:focus ~ span,
-.input-container .input:valid ~ span {
-    transform: translateY(-30px) translateX(10px);
-    font-size: medium;
+.input-container .input:focus ~ label,
+.input-container .input:valid ~ label {
+    transform: translateY(-2rem) translateX(0.7rem);
+    font-size: 1rem;
     background-color: white;
-    color: var(--color--1);
-    padding: 1px 5px;
+    color: var(--input--color--1);
+    padding: 0.06rem 0.31rem;
 }
 
 .input-container .input.error,
@@ -64,6 +66,10 @@
     border: var(--color--9) dotted thin;
 }
 
-.input-container .input.error ~ span {
+.input-container .input.error ~ label {
     color: var(--color--9);
+}
+
+.secondary {
+    --input--color--1: var(--color--8);
 }

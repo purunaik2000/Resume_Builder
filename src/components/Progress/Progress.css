@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --color--1 : #4681f4;
+    --color--2: #5783db;
+    --color--3: #55c2da;
+    --color--4: #5dbea3;
+    --color--5: #33b249;
+    --color--6: #5adbb5;
+    --color--7: #a881af;
+    --color--8: #80669d;
+    --color--9: #dd7973;
+    --color--10: #ffbd03;
+    --color--11: #ED0800;
+}
+
+.progress-container {
+    /* margin-left: 50px; */
+    /* height: 50px; */
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    --progress--color--01: var(--color--8);
+    --progress--color--02: var(--color--7);
+}
+
+.progress {
+    width: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.progress > li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.progress > li > span {
+    border: 0.1rem solid var(--progress--color--02);
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: aliceblue;
+    color: var(--progress--color--01);
+}
+
+.progress > li > .field-name {
+    color: var(--progress--color--01);
+    font-weight: bolder;
+}
+
+.progress-bar {
+    height: 0.3rem;
+    width: 92%;
+    background-color: var(--progress--color--01);
+    position: absolute;
+    top: 0.85rem;
+    left: 4%;
+    z-index: 1;
+}
+
+.progress-bar-line {
+    content: '';
+    position: absolute;
+    top: 0.85rem;
+    left: 4%;
+    width: 92%;
+    height: 1px;
+    background-color: #80669d;
+}
+
+.progress-primary {
+    --progress--color--01: var(--color--1);
+    --progress--color--02: var(--color--3);
+}
+
+.progress-secondary {
+    --color--01: var(--color--8);
+    --color--02: var(--color--7);
+}
+
+.step-0 {
+    width: 0%;
+    transition: width 2s ease-in-out;
+}
+
+.step-1 {
+    width: 23%;
+    transition: width 2s ease-in-out;
+}
+
+.step-2 {
+    width: 46%;
+    transition: width 2s ease-in-out;
+}
+
+.step-3 {
+    width: 69%;
+    transition: width 2s ease-in-out;
+}
+
+.step-4 {
+    width: 92%;
+    transition: width 2s ease-in-out;
+}
+
+span.completed-step {
+    background-color: var(--progress--color--01) !important;
+    color: white !important;
+    transition: background-color 2s;
+}
+
+span.incomplete-step {
+    background-color: aliceblue;
+    color: var(--progress--color--01);
+    transition: background-color 300ms 1700ms, color 300ms 1700ms;
+}

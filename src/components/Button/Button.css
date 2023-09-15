@@ -72,3 +72,12 @@
     --color--01: var(--color--8);
     --color--02: var(--color--7);
 }
+
+.disabled {
+    cursor: not-allowed;
+    opacity: 50%;
+}
+
+.disabled:hover::before {
+    transform: scaleX(0);
+}
