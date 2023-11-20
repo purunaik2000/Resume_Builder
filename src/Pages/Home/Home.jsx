@@ -6,6 +6,8 @@ import Button from "../../components/Button/Button";
 import Form from "../../components/Form/Form";
 import { UserContext } from "../../main";
 
+import validator from "../../validator/validator";
+
 export default function Home() {
 
   const {state, actions} = useContext(UserContext);
@@ -23,6 +25,11 @@ export default function Home() {
 
   const nextClickHandler = ()=>{
     if(nextDisabled) return;
+    const isValid = validator(step, state.data);
+    if(isValid !== true) {
+      alert(isValid);
+      return;
+    }
     if(step==4) setNextDisabled('disabled');
     setStep(step+1);
     setPrevDisabled('')

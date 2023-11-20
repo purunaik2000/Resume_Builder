@@ -85,7 +85,7 @@ let data = {
 
 export default function Resume() {
   const { state, actions } = useContext(UserContext);
-  // const {data} = state;
+  const {data} = state;
   const { toPDF, targetRef } = usePDF({filename: data.name+'-resume.pdf', method: 'open'});
   return (
     <div className="resume-page">

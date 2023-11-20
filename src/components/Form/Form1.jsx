@@ -18,10 +18,8 @@ export default function Form1() {
     temp[key] = event.target.value;
     setPersonal(temp);
     const newData = {...state.data};
-    newData.name = temp.fname+' '+temp.lname;
-    newData.title = temp.title;
-    newData.address = temp.address;
-    newData.about = temp.about;
+    if(key == 'fname' || key == 'lname' )newData.name = temp.fname+' '+temp.lname;
+    else newData[key] = temp[key];
     actions.setData(newData);
   }
   

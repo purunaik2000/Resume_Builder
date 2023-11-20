@@ -14,13 +14,10 @@ export default function Form2() {
 
   const handleOnChange = (event, key) => {
     const temp = {...contact};
-    contact[key] = event.target.value;
+    temp[key] = event.target.value;
     setContact(temp);
     const newData = {...state.data};
-    newData.email = temp.email;
-    newData.phone = temp.phone;
-    newData.linkedIn = temp.linkedIn;
-    newData.github = temp.github;
+    newData[key] = temp[key];
     actions.setData(newData);
   }
 

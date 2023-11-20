@@ -6,7 +6,7 @@ import "./index.css";
 export const UserContext = createContext();
 
 const Provider = (props) => {
-  const [data, setData] = useState({page: 1, image: "https://insertface.com/fb/691/men-passport-size-photo-691305-ffssw-fb.jpg"});
+  const [data, setData] = useState({page: 1});
   const value = {
     state: { data },
     actions: { setData },
